@@ -282,7 +282,7 @@ recall_total = mean(mean(recall,2));
 %fprintf('Overall recall: %0.2f%%\n',recall_total.*100);
 
 fid = fopen([outputdir '/lextest_overall_score.txt'],'w');
-fprintf(fid,'Overall recall: %0.3f\n',recall_total);
+fprintf(fid,'Overall recall: %0.3f\n',recall_total*100);
 fclose(fid);
 
 
