@@ -279,18 +279,18 @@ end
 recall_word = mean(recall,2);
 recall_total = mean(mean(recall,2));
 
-%fprintf('Overall recall: %0.2f%%\n',recall_total.*100);
+%fprintf('Overall recall: %0.2f%%\n',recall_total.);
 
 fid = fopen([outputdir '/lextest_overall_score.txt'],'w');
-fprintf(fid,'Overall recall: %0.3f\n',recall_total*100);
+fprintf(fid,'Overall recall: %0.3f\n',recall_total);
 fclose(fid);
 
 
 fid = fopen([outputdir '/lextest_type_scores.csv'],'w');
-%fprintf(fid,'Overall recall: %0.2f%%\n',recall_total.*100);
+%fprintf(fid,'Overall recall: %0.2f%%\n',recall_total.);
 %fprintf(fid,'Word-by-word recalls\n');
 for k = 1:length(recall_word)
-    fprintf(fid,'%s, %0.3f%%\n',uq_words{k},recall_word(k)*100);
+    fprintf(fid,'%s, %0.3f%%\n',uq_words{k},recall_word(k));
 end
 fclose(fid);
 
