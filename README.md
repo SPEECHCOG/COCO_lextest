@@ -53,4 +53,4 @@ or
 
 `sh COCO_lextest.sh 'COCO_synth/' 'demodata/COCO_embs_frame/' 'full' 1`
 
-which should produce 20.82% and 56.84%, respectively.
+which should produce 0.208 and 0.568, respectively.
